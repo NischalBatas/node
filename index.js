@@ -2,7 +2,7 @@ const express=require('express')
 var exphbs  = require('express-handlebars');
 
 const app=express()
-const port=process.env.port || 80
+const port=process.env.port || 3000
 const path=require('path')
 var hbs = exphbs.create({ /* config */ });
 
@@ -18,5 +18,5 @@ app.use('/',require(path.join(__dirname,'routers/blog.js')))
 
 
 app.listen(port,()=>{
-    console.log('http://localhost:80')
+    console.log('http://localhost:3000')
 })
